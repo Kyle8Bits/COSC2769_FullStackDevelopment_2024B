@@ -1,13 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
-body, html {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    padding-top: 10px;
-}
-
+/*P1*/
 .numpad{
     height: 450px;
     width: 430px;
@@ -75,5 +68,30 @@ body, html {
     height: auto;
     border: 2px solid black;
     border-radius: 15px;
+
+}
+
+/*P3*/
+.student, .header{
+    display: flex
+}
+
+.student div, .header div{
+    border: 1px black solid;
+    width: 100px;
+    padding: 10px;
+}
+
+.student .major, .header .major{
+    width: 200px;
+}
+
+ul{
+    margin: 0px;
+    padding: 0px;
+}
+
+.header{
+    margin-top: 100px;
 
 }
