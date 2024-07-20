@@ -1,12 +1,14 @@
 import React from 'react'
 import './style.css'
 
-export default function List(props) {
+export default function List() {
+    const student = [
+        {id:1, name: "Alice", major: "Information Technology", gpa: 3.2},
+        {id:3, name: "Carol", major: "Computer Science", gpa: 2.8},
+        {id:2, name: "Bob", major: "Software Engineering", gpa: 3.6},
+      ]
 
-    const list = props.studentList;
-
-    const studentList = 
-    list.map(
+    const studentList = student.map(
         student => 
         <li className='student' key ={student.id}>
             <div className='id'>{student.id}</div>
