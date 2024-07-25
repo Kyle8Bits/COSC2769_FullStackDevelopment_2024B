@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import Calculator from './components/week3/Calculator'
-import CalculatorTea from './components/week3/CalculatorTea'
-import List from './components/week3/List'
+import Calculator from './Calculator'
+import CalculatorTea from './CalculatorTea'
+import List from './List'
 import MenuIcon from '@mui/icons-material/Menu';
 
 function App() {
