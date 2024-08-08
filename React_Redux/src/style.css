@@ -29,9 +29,12 @@
     width: 100px;
 }
 
+:root{
+    --idk-color:#ffa500
+}
 .cart-item{
     background-color: bisque;
-    border-bottom: 2px orange solid;
+    border-bottom: 2px var(--idk-color) solid;
     margin: 0px;
     display: flex; /* Ensure proper layout */
     flex-direction: column; /* Adjust direction */
@@ -44,4 +47,37 @@
     margin: 10px;
     border-radius: 10px;
     font-weight: bold;
+}
+
+.return{
+    margin-bottom: 10px;
+    width: 100px;
+    height: 50px;
+}
+
+.login-hub{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: wheat;
+    padding: 10px;
+    width: 400px;
+    justify-items: center;
+    font-size: 1.5rem;
+}
+
+.login-hub input{
+    margin-left: 10px;
+    width: 200px;
+    border-radius: 2px;
+    border: 0px;
+}
+
+.login-hub button{
+    margin-top: 10px;
+    width: 100px;
+    border: 1px orangered solid;
+    border-radius: 10px;
+    font-size: 1rem;
 }

@@ -10,11 +10,11 @@ export default function Cart() {
   const items = cart.map((item) => {
     const id = item.product_id;
     const product = products.find((p) => p.id === id);
-    const { name, price } = product;
-    const quantity = item.quantity; // The item quantity, not product available quantity
-    const amount = price * quantity;
 
-    if (product) {
+    if(product){ 
+      const { name, price } = product;
+      const quantity = item.quantity; // The item quantity, not product available quantity
+      const amount = price * quantity;
       return (
         <CartItem
           key={id}
@@ -26,10 +26,10 @@ export default function Cart() {
         />
       );
     }
-    return <h3>Loading...</h3>;
+    return <h3 key={id}>Item loading...</h3>;
   });
 
-  return <div className="shopping-cart">{items}</div>;
+  return (<div className="shopping-cart">{items}</div>);
 }
 
 function CartItem({ id, name, price, quantity, amount }) {
