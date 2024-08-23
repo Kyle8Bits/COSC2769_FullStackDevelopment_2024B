@@ -1,0 +1,17 @@
+{
+    "user": [
+      {
+        "username": "khoa",
+        "password": "k123",
+        "friendlist": []
+      },
+      {
+        "username": "vy",
+        "password": "v123"
+      },
+      {
+        "username": "messi",
+        "password": "m123"
+      }
+    ]
+}
