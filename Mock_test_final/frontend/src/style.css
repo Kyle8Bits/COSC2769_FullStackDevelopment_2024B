@@ -1,0 +1,24 @@
+body{
+    background-color: #fff;
+}
+
+.navigate{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#header{
+    font-size: 25px;    
+    text-decoration: none;
+    color: black;
+}
+
+nav .active{
+    background-color: rgb(143, 156, 197);
+    text-decoration: underline;
+}
+
+a{
+    font-size: 25px;
+}
