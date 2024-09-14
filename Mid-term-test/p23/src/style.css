@@ -1,0 +1,13 @@
+*{
+    font-size: 1.5rem;
+    font-family: "Arial";
+    border-collapse: collapse;
+}
+
+.table td,th {
+    border: 2px black solid;
+    padding: 10px;
+    width: fit-content;
+    text-align: center;
+    position: relative;
+}
