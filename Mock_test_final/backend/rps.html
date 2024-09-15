@@ -20,6 +20,7 @@
     <script>
         const socket = new WebSocket("ws://localhost:8080");
 
+
         document.querySelector("#btn_R").addEventListener("click", ()=>{
             socket.send("R")
         })
@@ -32,7 +33,15 @@
         })
 
         socket.addEventListener("message", (event) => {
-            document.querySelector("#status").innerText = event.data;
+            const serverMessage = event.data;
+
+            if (serverMessage.includes("Round")) {
+                // Start the game and allow player to make their move
+                document.querySelector("#status").innerText = serverMessage;
+            } else {
+                // Display the game result
+                document.querySelector("#result").innerText = serverMessage;
+            }
         });
 
     </script>
