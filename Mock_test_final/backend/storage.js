@@ -1,6 +1,5 @@
 const { customers, products, orders } = require("./data");
 const fs = require('fs/promises');
-const path = require('path');
 
 /**
  * <customer1_id>, <customer1_name> 
@@ -12,7 +11,6 @@ const path = require('path');
 const save_orders = async ()=>{
 
     try{
-        const filePath = path.join(__dirname, "order_summary.txt");
 
         const sortedCustomer = customers.sort((a,b)=> a.id - b.id);
 
@@ -38,8 +36,7 @@ const save_orders = async ()=>{
                 fileContent += "\n"
             }
         })
-        console.log(fileContent)
-        await fs.writeFile(filePath, fileContent, 'utf-8');
+        await fs.writeFile('./order_summary.txt', fileContent, 'utf-8');
         console.log('Order summary saved successfully!');
 
     } catch (error) {

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Papper Scissor</title>
+</head>
+<body>
+    <h2 id="status"></h2>
+
+    <h3 id="result"></h3>
+    
+    <div>
+        <input type="button" value="R" id="btn_R">
+        <input type="button" value="P" id="btn_P">
+        <input type="button" value="S" id="btn_S">
+    </div>
+
+
+    <script>
+        const socket = new WebSocket("ws://localhost:8080");
+
+        document.querySelector("#btn_R").addEventListener("click", ()=>{
+            socket.send("R")
+        })
+
+        document.querySelector("#btn_P").addEventListener("click", ()=>{
+            socket.send("P")
+        })
+        document.querySelector("#btn_S").addEventListener("click", ()=>{
+            socket.send("S")
+        })
+
+        socket.addEventListener("message", (event) => {
+            document.querySelector("#status").innerText = event.data;
+        });
+
+    </script>
+</body>
+</html>
