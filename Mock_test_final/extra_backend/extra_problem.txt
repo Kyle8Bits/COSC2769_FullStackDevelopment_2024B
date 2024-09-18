@@ -1,0 +1,29 @@
+GraphQL
+Extends the GraphQL problem in the sample final exam to include "orders" in "customers", and "products" in "orders". Furthermore, let the callers filter out orders and products with "min_quantity", "max_quantity", "min_price", and "max_price". The query structure will be similar to the below:
+ 
+customers (name = "something") {
+  id,
+  name,
+  address,
+  orders (min_quantity: X, max_quantity: Y) {
+    quantity,
+    products (min_price: Z, max_price: T) {
+      id,
+      name,
+      price,
+      sell_off,
+      percent
+    },
+    order_amount
+  }
+}
+ 
+===
+WebSocket
+Implement a private-chat program
+- Each client enters a username (assume unique) and clicks "Connect" to connect to the server
+- When the server receives a new username, the server sends a list of all connected usernames to all clients
+- When a client receives the updated list of usernames, the client display all usernames in a dropdown list
+- A client chooses a username in the dropdown list, type in a message in a text field, and clicks "Send" to send that message to the target username
+- The server forwards the message to the target username
+- Each client when receives a message from another client should display "UserX: <Message>" (UserX is the username of the sender, and <Message> is the received message from UserX)
